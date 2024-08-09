@@ -1,0 +1,13 @@
+name: g_lens
+description: A sample command-line application.
+version: 1.0.0
+
+environment:
+  sdk: '>=2.13.0 <4.0.0'
+
+dependencies:
+  collection: ^1.18.0
+
+dev_dependencies:
+  lints: ^2.1.0
+  test: ^1.24.0

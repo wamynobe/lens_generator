@@ -1,0 +1,15 @@
+targets:
+  $default:
+    builders:
+      g_lens_generator|g_lens_generator:
+        enabled: true
+
+builders:
+  g_lens:
+    import: "package:g_lens_generator/builder.dart"
+    builder_factories: ["lensGenerator"]
+    build_extensions: { ".dart": [".lens.dart"] }
+    auto_apply: dependents
+    build_to: source
+    applies_builders: ["source_gen|combining_builder"]
+    runs_before: ["json_serializable|json_serializable"]
